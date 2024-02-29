@@ -5,13 +5,13 @@
             "name": "Python Debugger: Current File",
             "type": "debugpy",
             "request": "launch",
-            "program": "${file}",
+            "module": "sef_status_check",
             "console": "integratedTerminal",
             "args": [
                 "-e", "Your SEF E-mail.",
                 "-p", "Your SEF Password.",
                 "-b", "Your browser (For now, we only support Firefox and Chrome.)"
-            ]
+            ],
         }
     ]
 }
