@@ -29,7 +29,10 @@ pip install -r requirements.txt
 
 ## :arrow_forward: How to execute
 
-Just run 
+Just run the command bellow in the repository root folder:
+```python
+python sef_status_check -e "YourEmail" -p "YourPassword" -b "firefox" (or "chrome")
+```
 
 To execute the code in your local machine, you need to configure some environment variables or just use the .vscode folder with a configured launch.json file.
 
