@@ -1,7 +1,7 @@
 """Module responsible for selenium automation in SEF website"""
 
 from selenium import webdriver
-from utils import element
+from sef_status_check.utils import element
 
 
 def get_residence_permit_status(driver: webdriver, email: str, password: str) -> str:

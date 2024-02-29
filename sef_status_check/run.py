@@ -1,7 +1,7 @@
 """Main module of the project"""
 
-import config
-from sef import webdriver_automation
+from sef_status_check import config
+from sef_status_check.sef import webdriver_automation
 
 def execute(email: str, password: str, browser: str) -> None:
     print("Loading browser driver....")

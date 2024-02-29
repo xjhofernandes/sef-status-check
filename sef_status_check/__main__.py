@@ -1,7 +1,7 @@
 """Main module to call the main functions"""
 
 import argparse
-import run
+from sef_status_check import run
 
 
 if __name__ == "__main__":
