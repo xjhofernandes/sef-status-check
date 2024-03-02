@@ -4,9 +4,11 @@ from selenium import webdriver
 from sef_status_check.utils import element
 
 
-def get_residence_permit_status(driver: webdriver, email: str, password: str) -> str:
+def get_residence_permit_status(
+        driver: webdriver, email: str, password: str) -> str:
     """
-    Get the Residence Permit status in SEF homepage. https://www.sef.pt/pt/Pages/homepage.aspx 
+    Get the Residence Permit status in SEF homepage.
+    From endpoint: https://www.sef.pt/pt/Pages/homepage.aspx.
 
     Args:
         driver (webdriver): Selected Browser Driver (Chrome or Firefox).
@@ -36,9 +38,16 @@ def get_residence_permit_status(driver: webdriver, email: str, password: str) ->
     print("Obtaing your scheduling information...")
     element.find_and_click_element("id", "btnNovoAgendamento", driver)
 
-    dropdown_services_list = driver.find_element(by="id", value="Services_List")
+    dropdown_services_list = driver.find_element(
+        by="id",
+        value="Services_List"
+    )
 
-    ar_status_info = dropdown_services_list.text.replace("--Selecione uma opção--\n", "")
+    ar_status_info = dropdown_services_list.text.replace(
+        "--Selecione uma opção--\n",
+        ""
+    )
+
     print("All done! :)")
 
     return ar_status_info

@@ -12,7 +12,7 @@ option.add_argument('--log-level=3')
 
 def obtain_webdriver_browser(browser_name: str) -> webdriver:
     """
-    Obtain the webdriver from the selected browser. 
+    Obtain the webdriver from the selected browser.
     In this case, we just support Chrome and Firefox.
 
     Args:
@@ -26,8 +26,9 @@ def obtain_webdriver_browser(browser_name: str) -> webdriver:
     elif browser_name == "firefox":
         return webdriver.Firefox(options=option)
     else:
-        error_output = "Sorry, but we don't support this web browser yet... Se in your next updates..."
+        error_output = "Sorry, but we don't support this web browser."
         raise ValueError(error_output)
+
 
 def quit_webdriver(driver: webdriver) -> None:
     """
@@ -38,7 +39,8 @@ def quit_webdriver(driver: webdriver) -> None:
     """
     driver.quit()
 
-patrick_estrela  = """
+
+patrick_estrela = """
 ⣴⣶⣶⠿⠟⠛⠻⠷⣶⣶⣶⣤⣄⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⣿⣿⠁⠰⠆⠀⠀⠀⠀⠀⠈⠉⠛⠛⠿⣿⣶⣶⣦⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⢹⣿⣆⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠙⠛⠿⢿⣿⣷⣶⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
